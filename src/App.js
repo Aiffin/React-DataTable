@@ -1,24 +1,20 @@
-import logo from './logo.svg';
+import React from 'react';
+import Postdata from './components/Postdata';
 import './App.css';
 
-function App() {
+//Redux
+import { Provider } from 'react-redux';
+import store from './store';
+
+  const App = () =>{
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Provider store={store}>
+    <div className='container mt-5'>
+      <h1 className='text-primary mb-3'>My Blog</h1>
+      <Postdata />   
     </div>
+    </Provider>
   );
 }
 
