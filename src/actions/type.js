@@ -1,6 +1,6 @@
 export const GET_DATATABLE='GET_DATATABLE';
 export const DATA_ERROR='DATA_ERROR';
-export const UPDATE_DATATABLE='UPDATE_DATATABLE';
-export const SET_ALERT = 'SET_ALERT';
 export const REMOVE_ALERT = 'REMOVE_ALERT';
-export const DELETE_POST='DELETE_POST'
+export const DELETE_POST='DELETE_POST';
+
+

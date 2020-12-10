@@ -1,6 +1,6 @@
 import axios from 'axios';
-import {GET_DATATABLE,DATA_ERROR,UPDATE_DATATABLE,DELETE_POST} from './type';
-import {setAlert} from './alert'
+import {GET_DATATABLE,DATA_ERROR,DELETE_POST} from './type';
+
 
 export const fetchData = () => async dispatch =>{
     try {
@@ -30,8 +30,7 @@ export const deleteRow = id => async dispatch => {
             payload:id
         })
 
-        dispatch(setAlert(' Removed','success'));
-        console.log("deleted")
+        console.log(`deleted ${id}`)
         
     } catch (err) {
 

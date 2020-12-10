@@ -45,7 +45,7 @@ const Postdata = ({fetchData,deleteRow,post:{posts,loading}}) => {
       <tbody>
           { (currentPageData.length > 0) ? currentPageData.map((post,id)=>{
               return(
-                  <tr key={post.id}>
+                  <tr key={id}>
                       <td>{post.albumId}</td>
                       <td>{post.id}</td>
                       <td>{post.title}</td>

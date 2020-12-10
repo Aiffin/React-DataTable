@@ -1,4 +1,4 @@
-import {GET_DATATABLE,DATA_ERROR, UPDATE_DATATABLE,DELETE_POST} from '../actions/type';
+import {GET_DATATABLE,DATA_ERROR,DELETE_POST} from '../actions/type';
 const initialState = {
     post:null,
     posts:[],
@@ -18,13 +18,6 @@ export default function foo(state = initialState,action) {
 
             }
         
-            case UPDATE_DATATABLE:
-                return {
-                    ...state,
-                    post:payload,
-                    loading:false
-    
-                }
             case DATA_ERROR:
                 return {
                     ...state,
@@ -36,7 +29,7 @@ export default function foo(state = initialState,action) {
                 case DELETE_POST:
                     return {
                         ...state,
-                        posts:state.posts.filter(post => post._id !==payload),
+                        posts:state.posts.filter(post => post.id !== payload),
                         loading: false
                     };
                 default:
